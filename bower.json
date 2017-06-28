@@ -1,0 +1,19 @@
+{
+  "name": "movieapi",
+  "description": "#### An Epicodus project in Javascript and API building, 06.28.17",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "movieapi",
+  "version": "1.0.0",
+  "description": "#### An Epicodus project in Javascript and API building, 06.28.17",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bower-files": "^4.0.0",
+    "bower-sync": "^0.1.1",
+    "browserify": "^14.4.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.9.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
