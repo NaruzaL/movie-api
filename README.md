@@ -6,11 +6,11 @@
 
 ## Description
 
-This web application will allow a salon to book bands with a venue.
+This web application will allow...
 
-|Behavior| Input (User Action/Selection) |Description|
+<!-- |Behavior| Input (User Action/Selection) |Description|
 |---|:---:|:---:|
-|Add a band. |Add band: Faith No More|An add function. |
+|Add a band. |Add band: Faith No More|An add function. | -->
 
 
 ## Setup/Installation Requirements
