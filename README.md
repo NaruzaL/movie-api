@@ -35,3 +35,6 @@ If you have any issues or have questions, ideas, concerns, or contributions plea
 This software is licensed under the MIT license.
 
 Copyright (c) 2017 **Pete Lazuran and Anabel Ramirez**
+
+
+https://developers.themoviedb.org/3/getting-started/search-and-query-for-details
