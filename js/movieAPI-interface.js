@@ -1,8 +1,7 @@
 
 var Movie = require('./../js/movieAPI.js').movieModule;
-
 var displayName = function(movie, nameData) {
-  $('#showMovie').text(nameData);
+  $('#showMovie').append('<li>' + nameData + '</li>');
 };
 
 // var displayTemperature = function(city, temperatureData) {
@@ -16,6 +15,7 @@ $(document).ready(function() {
     var movie = $('#name').val();
     $('#name').val("");
     currentMovieObject.getName(movie, displayName);
-
+    $('#showMovie').empty();
   });
+
 });

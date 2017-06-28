@@ -5,8 +5,10 @@ Movie = function(){
 
 Movie.prototype.getName = function(movie, displayName) {
   $.get('https://api.themoviedb.org/3/search/movie?api_key='+apiKey + '&query=' + movie).then(function(response) {
-    console.log(JSON.stringify(response.results[0].title));
-    displayName(movie, response.results[0].title);
+    for (var i = 0; i < response.results.length; i ++){
+      console.log(JSON.stringify(response.results[i].title));
+    displayName(movie, response.results[i].title);
+  }
   }).fail(function(error) {
     $('#showMovie').text(error.responseJSON.message);
   });
@@ -22,3 +24,6 @@ Movie.prototype.getName = function(movie, displayName) {
 // }
 
 exports.movieModule = Movie;
+
+
+// console.log(JSON.stringify(response.results[0].title));
