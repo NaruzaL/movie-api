@@ -1,16 +1,20 @@
 var Movie = require('./../js/movieAPI.js').movieModule;
 
-var displayName = function(movie, nameData, idData) {
-  $('#showMovie').append('<li class ="specific" id = '+idData+'>' + nameData + '</li>' + "<br>");
-  addClick(idData);
+// currentMovieObject = new Movie();
+
+var displayName = function(allMovies) {
+  allMovies.forEach(function(movie) {
+  $('#showMovie').append('<li class ="specific" id = '+movie.id+'>' + movie.title + '</li>' + "<br>");
+  });
+  addClick(id);
 };
 
-
-var displayAll = function(overviewData, release_dateData, nameData) {
-  $('#showAll').append('<li >' + nameData + '</li>');
-  $('#showAll').append('<li >' + overviewData + '</li>');
-  // $('#showAll').append('<li >' + "<img src = "+ poster_pathData +" alt = ""/>" + '</li>');
-  $('#showAll').append('<li >' + release_dateData + '</li>');
+var displayAll = function(overview, posterPath, releaseDate, runtime, name) {
+  $('#showAll').append('<img src = https://image.tmdb.org/t/p/w500'+posterPath+' />');
+  $('#showAll').append('<li >' + releaseDate + '</li>');
+  $('#showAll').append('<li >' + 'runtime:' + runtime + '</li>');
+  $('#showAll').append('<li >' + '<strong>' + name + '</strong>' + '</li>');
+  $('#showAll').append('<li >' + overview + '</li>');
 };
 
 
@@ -20,18 +24,21 @@ $(document).ready(function() {
     var movie = $('#name').val();
     $('#showMovie').empty();
     $('#name').val("");
-    currentMovieObject.getName(movie, displayName);
+    currentMovieObject.list(movie, displayName);
+
+    // currentMovieObject.getName(movie, displayName);
   });
 });
-var addClick = function(idData){
+var addClick = function(id){
 var selectedMovieObject = new Movie();
 
   $('.specific').click(function() {
-    idData = $(this)[0].id;
-    console.log(idData);
+    $('#showMovie').empty();
+    $('#showAll').empty();
+    id = $(this)[0].id;
+    console.log(id);
     // console.log($(this)[0].id);
     // $('#movieId').val("");
-    selectedMovieObject.getAll(idData, displayAll);
-    // $('#showMovie').empty();
+    selectedMovieObject.getAll(id, displayAll);
   });
 };
