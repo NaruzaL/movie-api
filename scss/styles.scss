@@ -1,0 +1,47 @@
+
+$black : #000000;
+$darkblue : #153243;
+$gray : #475B63;
+$lightblue : #A1B5D8;
+$cream : #EBF5EE;
+
+body {
+  background: $lightblue;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+li {
+  list-style-type: none;
+  font-size: 16px;
+  color: $darkblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.responses {
+  margin-top: 20px;
+  border: 1px solid $darkblue;
+  border-radius: 15px;
+  background: $cream;
+  padding: 50px;
+}
+
+#showMovie, #showAll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieName {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.btn {
+  background: $darkblue;
+  color: $cream;
+}

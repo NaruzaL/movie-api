@@ -4,25 +4,28 @@ var Movie = require('./../js/movieAPI.js').movieModule;
 
 var displayName = function(allMovies) {
   allMovies.forEach(function(movie) {
-  $('#showMovie').append('<li class ="specific" id = '+movie.id+'>' + movie.title + '</li>' + "<br>");
+  $('#showMovie').append('<li class ="specific" id = '+movie.id+'>' + '<span class = "movieName">' + movie.title +'</span>' + ' (' +  movie.release_date + ')' + '</li>' + "<br>");
   });
   addClick(id);
 };
 
 var displayAll = function(overview, posterPath, releaseDate, runtime, name) {
   $('#showAll').append('<img src = https://image.tmdb.org/t/p/w500'+posterPath+' />');
-  $('#showAll').append('<li >' + releaseDate + '</li>');
-  $('#showAll').append('<li >' + 'runtime:' + runtime + '</li>');
-  $('#showAll').append('<li >' + '<strong>' + name + '</strong>' + '</li>');
-  $('#showAll').append('<li >' + overview + '</li>');
+  $('#showAll').append('<p class="movieName">' + name + '</p>');
+  $('#showAll').append('<p ><strong>Release date:</strong> ' + releaseDate + '</p>');
+  $('#showAll').append('<p ><strong>Runtime: </strong>' + runtime + '</p>');
+  $('#showAll').append('<p ><strong>Synopsis: </strong>' + overview + '</p>');
 };
 
 
 $(document).ready(function() {
+  $('.responses').hide();
   var currentMovieObject = new Movie();
   $('#go-button').click(function() {
+    $('.responses').show();
     var movie = $('#name').val();
     $('#showMovie').empty();
+    $('#showAll').empty();
     $('#name').val("");
     currentMovieObject.list(movie, displayName);
 

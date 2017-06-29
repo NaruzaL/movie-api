@@ -2,21 +2,27 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta charset="utf-8">
     <title>Movie</title>
   </head>
   <body>
     <div class="container">
       <h1>Get movie info!</h1>
-      <label for="movie-name">Enter a movie name:</label>
-      <input id="name" type="text">
-      <button class="btn-danger" id="go-button">Get movie!</button>
-      <ul id="showMovie">
-      </ul>
-      <ul id="showAll">
-      </ul>
+      <div class="InputField">
+        <label for="movie-name">Enter a movie name:</label>
+        <input id="name" type="text">
+        <button class="btn" id="go-button">SEARCH</button>
+    </div>
+    <div class="responses">
+      <div id="showMovie">
+      </div>
+      <div id="showAll">
+      </div>
+    </div>
     </div>
   </body>
 </html>
